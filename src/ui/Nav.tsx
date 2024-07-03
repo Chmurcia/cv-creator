@@ -10,7 +10,7 @@ const StyledNav = styled.nav`
   position: fixed;
   z-index: 1000;
   width: 100vw;
-  padding: 0 20px 0 20px;
+  padding: 0 2em 0 2em;
 `;
 const List = styled.li`
   display: flex;
@@ -20,6 +20,7 @@ const ListEl = styled.ul`
   font-size: 2rem;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
+
   &:hover {
     text-decoration: underline;
   }
