@@ -10,6 +10,7 @@ const Site = styled.div`
   align-items: center;
   flex-direction: column;
   gap: 3rem;
+  padding: 0 2rem 0 2rem;
 `;
 const TextDiv = styled.div`
   display: flex;
@@ -29,6 +30,14 @@ const SubText = styled.p`
   font-size: 1.5rem;
   color: #7d7d7d;
   margin: 0;
+  display: flex;
+  text-align: center;
+  gap: 8px;
+`;
+
+const SingleP = styled.p`
+  color: #2ccea8;
+  margin: 0;
 `;
 
 const Home = () => {
@@ -36,9 +45,13 @@ const Home = () => {
     <Site>
       <TextDiv>
         <MainTitle>CloudCV</MainTitle>
-        <SubText>Create your CV rapid and well</SubText>
+        <SubText>
+          Create your CV <SingleP>rapid</SingleP> and <SingleP>well</SingleP>
+        </SubText>
       </TextDiv>
-      <Button type="big">Create your CV</Button>
+      <Button to="/editor" type="big">
+        Create your CV
+      </Button>
     </Site>
   );
 };
