@@ -10,8 +10,14 @@ const StyledButton = styled(Link)`
   background-color: #2ccea8;
   font-weight: 700;
   font-family: "Pragati Narrow";
-  letter-spacing: 0.2em;
+  letter-spacing: 0.15em;
   cursor: pointer;
+  text-decoration: none;
+  color: #1c1c1c;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 type ButtonProps = {
@@ -27,6 +33,7 @@ export const Button = ({ children, type, to }: ButtonProps) => {
         <StyledButton
           to={to}
           style={{
+            width: "300px",
             height: "50px",
             fontSize: "1.5em",
             padding: "0 20px 0 20px",
