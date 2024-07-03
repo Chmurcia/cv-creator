@@ -23,6 +23,10 @@ const MainTitle = styled.p`
   font-weight: bolder;
   font-size: 10rem;
   margin: 0;
+
+  @media (max-width: 750px) {
+    font-size: 5rem;
+  }
 `;
 
 const SubText = styled.p`
@@ -33,6 +37,9 @@ const SubText = styled.p`
   display: flex;
   text-align: center;
   gap: 8px;
+  @media (max-width: 750px) {
+    font-size: 1rem;
+  }
 `;
 
 const SingleP = styled.p`

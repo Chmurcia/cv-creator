@@ -8,6 +8,9 @@ const RuleTitle = styled.p`
   font-size: 1.6rem;
   font-weight: bold;
   margin: 0;
+  @media (max-width: 600px) {
+    font-size: 1.2em;
+  }
 `;
 
 const RuleDesc = styled.p`
@@ -15,6 +18,9 @@ const RuleDesc = styled.p`
   font-weight: bold;
   color: #575757;
   margin: 0;
+  @media (max-width: 600px) {
+    font-size: 1.2em;
+  }
 `;
 
 type RuleProps = { title: string; desc: string; numStr: string };

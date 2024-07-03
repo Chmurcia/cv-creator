@@ -25,6 +25,9 @@ const Title = styled.p`
   font-weight: bolder;
   font-size: 3.5em;
   margin: 0;
+  @media (max-width: 550px) {
+    font-size: 2.5em;
+  }
 `;
 
 const SubText = styled.p`
@@ -54,6 +57,9 @@ const FooterText = styled.p`
   font-weight: bold;
   font-size: 1.4rem;
   margin: 0 0 1rem 0;
+  @media (max-width: 550px) {
+    font-size: 1%.2;
+  }
 `;
 
 const RulesCV = () => {
