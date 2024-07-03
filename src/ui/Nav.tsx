@@ -11,6 +11,7 @@ const StyledNav = styled.nav`
   z-index: 1000;
   width: 100vw;
   padding: 0 20px 0 20px;
+  background-color: rgb(255, 255, 255);
 `;
 const List = styled.li`
   display: flex;
@@ -39,7 +40,7 @@ export const Nav = () => {
           <Link to="/home">Home</Link>
         </ListEl>
         <ListEl>
-          <Link to="/how">Rules of CV</Link>
+          <Link to="/rules">Rules of CV</Link>
         </ListEl>
         <ListEl>
           <Link to="/editor">Editor</Link>
