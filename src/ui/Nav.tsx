@@ -39,10 +39,10 @@ export const Nav = () => {
           <Link to="/home">Home</Link>
         </ListEl>
         <ListEl>
-          <Link to="/how">How</Link>
+          <Link to="/how">Rules of CV</Link>
         </ListEl>
         <ListEl>
-          <Link to="/themes">Themes</Link>
+          <Link to="/themes">Editor</Link>
         </ListEl>
       </List>
     </StyledNav>
