@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const StyledButton = styled.button`
+const StyledButton = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -16,13 +17,15 @@ const StyledButton = styled.button`
 type ButtonProps = {
   children: React.ReactNode;
   type: string;
+  to: string;
 };
 
-export const Button = ({ children, type }: ButtonProps) => {
+export const Button = ({ children, type, to }: ButtonProps) => {
   switch (type) {
     case "big":
       return (
         <StyledButton
+          to={to}
           style={{
             height: "50px",
             fontSize: "1.5em",
@@ -35,6 +38,7 @@ export const Button = ({ children, type }: ButtonProps) => {
     case "small":
       return (
         <StyledButton
+          to={to}
           style={{
             height: "30px",
             fontSize: "1.5em",
