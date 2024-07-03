@@ -10,7 +10,7 @@ const StyledNav = styled.nav`
   position: fixed;
   z-index: 1000;
   width: 100vw;
-  padding: 0 2em 0 2em;
+  padding: 0 20px 0 20px;
 `;
 const List = styled.li`
   display: flex;
