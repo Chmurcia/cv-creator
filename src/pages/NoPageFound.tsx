@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const ErrorDiv = styled.div`
-  height: 100vh;
+  width: 100dvw;
+  height: 100dvh;
   color: #7d7d7d;
   font-size: 2em;
   display: flex;
