@@ -42,7 +42,7 @@ export const Nav = () => {
           <Link to="/how">Rules of CV</Link>
         </ListEl>
         <ListEl>
-          <Link to="/themes">Editor</Link>
+          <Link to="/editor">Editor</Link>
         </ListEl>
       </List>
     </StyledNav>
