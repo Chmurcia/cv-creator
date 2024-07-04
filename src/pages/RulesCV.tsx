@@ -10,6 +10,7 @@ const Site = styled.div`
   color: #1c1c1c;
   letter-spacing: 0.2em;
   padding: 0 2rem 0 2rem;
+  overflow-x: hidden;
 `;
 
 // Header
