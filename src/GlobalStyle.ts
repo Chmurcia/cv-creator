@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     background-image: url("../../background.svg");
     background-size: cover;
     background-attachment: fixed
+
   }
   *, *::before, *::after {
     box-sizing:inherit;
