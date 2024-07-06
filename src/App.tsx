@@ -1,7 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import NoPageFound from "./pages/NoPageFound";
-import { Redirect } from "./components/Redirect";
 import { Nav } from "./components/Nav";
 import RulesCV from "./pages/RulesCV";
 import Editor from "./pages/Editor";
@@ -19,8 +18,7 @@ function App() {
         {show && <Menu setShow={setShow} />}
         {show && <Overlay />}
         <Routes>
-          <Route path="/" element={<Redirect />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/rules" element={<RulesCV />} />
           <Route path="/editor" element={<Editor />} />
           <Route path="*" element={<NoPageFound />} />
