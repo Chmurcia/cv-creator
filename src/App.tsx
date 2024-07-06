@@ -1,16 +1,23 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import NoPageFound from "./pages/NoPageFound";
-import { Redirect } from "./ui/Redirect";
-import { Nav } from "./ui/Nav";
+import { Redirect } from "./components/Redirect";
+import { Nav } from "./components/Nav";
 import RulesCV from "./pages/RulesCV";
 import Editor from "./pages/Editor";
+import { Toaster } from "react-hot-toast";
+import { Menu } from "./ui/Menu";
+import { useState } from "react";
+import { Overlay } from "./ui/Overlay";
 
 function App() {
+  const [show, setShow] = useState<boolean>(false);
   return (
     <>
       <BrowserRouter>
-        <Nav />
+        <Nav setShow={setShow} />
+        {show && <Menu setShow={setShow} />}
+        {show && <Overlay />}
         <Routes>
           <Route path="/" element={<Redirect />} />
           <Route path="/home" element={<Home />} />
@@ -19,6 +26,7 @@ function App() {
           <Route path="*" element={<NoPageFound />} />
         </Routes>
       </BrowserRouter>
+      <Toaster position="top-center" />
     </>
   );
 }
