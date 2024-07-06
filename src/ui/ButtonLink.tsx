@@ -22,6 +22,11 @@ const StyledButtonBig = styled(Link)`
   &:hover {
     transform: scale(1.1);
   }
+  @media (max-width: 500px) {
+    width: 240px;
+    height: 40px;
+    font-size: 1rem;
+  }
 `;
 
 const StyledButtonSmall = styled(Link)`
