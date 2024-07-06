@@ -2,14 +2,12 @@ import styled from "styled-components";
 import CV1 from "../ui/CV/CV1";
 import { useEffect, useReducer, useState } from "react";
 import { Action, State } from "../service/Services";
-import { ButtonLink } from "../ui/ButtonLink";
-import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
 import { TextArea } from "../ui/TextArea";
 import { InputAdv } from "../ui/InputAdv";
-import { PhotoUpload } from "../ui/PhotoUpload";
 import { InputExp } from "../ui/InputExp";
 import { InputEdu } from "../ui/inputEdu";
+import { ButtonBox } from "../ui/ButtonBox";
 
 const Site = styled.div`
   display: flex;
@@ -20,12 +18,7 @@ const Site = styled.div`
   height: 100dvh;
   overflow-x: hidden;
 `;
-const ButtonsBox = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 0 0 5px 0;
-  width: 100%;
-`;
+
 // Inputs
 
 const InputsArea = styled.div`
@@ -266,16 +259,7 @@ const Editor = () => {
   return (
     <Site>
       <div>
-        <ButtonsBox>
-          <ButtonLink type="small" to="/home">
-            Go back
-          </ButtonLink>
-          <PhotoUpload onFileSelect={handleFileSelect} />
-
-          <Button type="small" onClick={() => dispatch({ type: "reset" })}>
-            Reset
-          </Button>
-        </ButtonsBox>
+        <ButtonBox handleFileSelect={handleFileSelect} dispatch={dispatch} />
         <InputsArea>
           <Form>
             <Title>Current Informations</Title>
