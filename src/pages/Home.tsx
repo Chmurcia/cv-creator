@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "../ui/Button";
+import { ButtonLink } from "../ui/ButtonLink";
 
 const Site = styled.div`
   font-family: "Open sans", sans-serif;
@@ -56,9 +56,9 @@ const Home = () => {
           Create your CV <SingleP>rapid</SingleP> and <SingleP>well</SingleP>
         </SubText>
       </TextDiv>
-      <Button to="/editor" type="big">
+      <ButtonLink to="/editor" type="big">
         Create your CV
-      </Button>
+      </ButtonLink>
     </Site>
   );
 };
