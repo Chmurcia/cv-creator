@@ -27,6 +27,9 @@ const MainTitle = styled.p`
   @media (max-width: 750px) {
     font-size: 5rem;
   }
+  @media (max-width: 400px) {
+    font-size: 4rem;
+  }
 `;
 
 const SubText = styled.p`
@@ -39,6 +42,9 @@ const SubText = styled.p`
   gap: 8px;
   @media (max-width: 750px) {
     font-size: 1rem;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.6rem;
   }
 `;
 
