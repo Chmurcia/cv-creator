@@ -39,7 +39,8 @@ interface NavProps {
 }
 
 export const Nav = ({ setShow }: NavProps) => {
-  const [width, setWidth] = useState<number>(0);
+  const [width, setWidth] = useState<number>(window.innerHeight);
+
   useEffect(() => {
     const handleResize = () => {
       setWidth(window.innerWidth);
@@ -47,10 +48,13 @@ export const Nav = ({ setShow }: NavProps) => {
 
     window.addEventListener("resize", handleResize);
 
+    handleResize();
+
     return () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  console.log(window.innerWidth);
 
   const location = useLocation();
   const isEditor = location.pathname === "/editor";
@@ -76,5 +80,7 @@ export const Nav = ({ setShow }: NavProps) => {
         )}
       </StyledNav>
     );
+  } else {
+    null;
   }
 };
